@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahyu Amal Imran</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tautan ke Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Animasi latar belakang */
+       /* Animasi latar belakang */
+body {
+    animation: gradientBackground 5s ease infinite;
+    background: linear-gradient(45deg, #f1f2f4, #a5c8ab);
+    background-size: 400% 400%;
+    margin: 0;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Warna teks dan padding untuk konten */
+.content {
+    color: #FFF8C9;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #f25ee0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.navbar-brand {
+    color: #FFCF96;
+}
+
+.nav-link {
+    color: #FFCF96;
+    margin:5px;
+}
+
+.carousel-caption {
+    background: rgba(250, 249, 249, 0.5);
+    color: #1f1f1e;
+}
+
+/* Ukuran maksimum gambar dalam Carousel */
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.body{
+    font-family: Arial, sans-serif; /* Ganti dengan font yang Anda inginkan */
+}
+
+.custom-font {
+    font-family: "Courier New", monospace; /* Font khusus untuk elemen dengan class "custom-font" */
+}
+
+.navbar {
+    border-bottom: 2px solid transparent; /* Garis bawah awalnya transparan */
+}
+
+.navbar a:link,
+.navbar a:visited {
+    text-decoration: none; /* Hilangkan dekorasi tautan */
+}
+
+.navbar a:active,
+.navbar a:hover {
+    border-bottom: 2px solid #FFCF96; /* Warna dan lebar garis bawah saat aktif dan hover */
+}
+
+.navbar a:focus {
+    outline:#FFCF96 /* Hilangkan outline default saat fokus */
+}
+
+/* CSS untuk garis bawah pada navbar setelah diklik */
+.nav-link.active {
+    border-bottom: 2px solid #FFCF96;
+}
+
+.carousel {
+    max-width: 800px; /* Lebar maksimum carousel */
+    margin: 0 auto; /* Pusatkan carousel secara horizontal */
+}
+
+.carousel-inner img {
+    width: 600px; /* Atur lebar yang Anda inginkan */
+    height: 600px; /* Atur tinggi yang Anda inginkan */
+    object-fit: cover; /* Atur pemadatan objek gambar jika perlu */
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.navbar{
+    background-color: #11571e;
+
+}
+#tanggal, #jam {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Back to Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="artikel.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buku_tamu.html">Buku Tamu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jadwal_kuliah.html">Jadwal Kuliah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pendidikan.html">Riwayat Pendidikan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Untitled-1.html">Harga Barang</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="javascriptMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Java Script
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="javascriptMenu">
+                            <a class="dropdown-item" href="Mnghitung.html">Menghitung Luas Persegi Panjang</a>
+                            <a class="dropdown-item" href="Memeriksaangka.html">Memeriksa Angka Positif Negatif Atau Nol</a>
+                            <a class="dropdown-item active" href="kalkulator.html">Kalkulator</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</head>
+<body>
+    <h1>Kalkulator Sederhana</h1>
+    <p>Masukkan angka pertama:</p>
+    <input type="text" id="angka1" placeholder="Angka pertama">
+    <p>Pilih operasi:</p>
+    <select id="operasi">
+        <option value="tambah">Penambahan (+)</option>
+        <option value="kurang">Pengurangan (-)</option>
+        <option value="kali">Perkalian (*)</option>
+        <option value="bagi">Pembagian (/)</option>
+    </select>
+    <p>Masukkan angka kedua:</p>
+    <input type="text" id="angka2" placeholder="Angka kedua">
+    <button onclick="hitung()">Hitung</button>
+    <p>Hasil: <span id="hasil"></span></p>
+    <br><br><br>
+    <footer class="text-center mt-5">
+        <p>&copy; 2023. Credit by <a href="https://www.instagram.com/whyuamal_/">Wahyu Amal Imran</a></p>
+    </footer Tautan ke Bootstrap JavaScript dan jQuery (Diperlukan untuk komponen Bootstrap) -->
+
+    <script>
+        function hitung() {
+            // Ambil nilai angka pertama, operasi, dan angka kedua dari input
+            var angka1 = parseFloat(document.getElementById("angka1").value);
+            var operasi = document.getElementById("operasi").value;
+            var angka2 = parseFloat(document.getElementById("angka2").value);
+
+            // Hitung berdasarkan operasi yang dipilih
+            var hasil;
+            if (operasi === "tambah") {
+                hasil = angka1 + angka2;
+            } else if (operasi === "kurang") {
+                hasil = angka1 - angka2;
+            } else if (operasi === "kali") {
+                hasil = angka1 * angka2;
+            } else if (operasi === "bagi") {
+                if (angka2 === 0) {
+                    alert("Pembagian dengan nol tidak diizinkan.");
+                    return;
+                }
+                hasil = angka1 / angka2;
+            }
+
+            // Tampilkan hasil
+            document.getElementById("hasil").textContent = hasil;
+        }
+    </script>
+       <!-- Tautan ke Bootstrap JavaScript dan jQuery (Diperlukan untuk komponen Bootstrap) -->
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
